@@ -10,6 +10,8 @@ using namespace std;
 *
 */
 //prototype
+
+int indexarr();
 //--------------------------
 //micro
 //---------------------
@@ -18,8 +20,24 @@ using namespace std;
 int main(int argc, char** argv)
 {
 
+//Declar number of array
+int n;
+n = indexarr();
+
+
+
 getch();
 }
 //function variable
 //--------------------------
 //functions
+
+//read number of array
+int indexarr()
+{
+    int n;
+    cout<<"Enter number of array = ";
+    cin>>n;
+
+    return n;
+}
