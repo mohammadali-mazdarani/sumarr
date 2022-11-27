@@ -12,6 +12,10 @@ using namespace std;
 //prototype
 
 int indexarr();
+
+void readarr(int b[],int &h);
+
+
 //--------------------------
 //micro
 //---------------------
@@ -22,9 +26,17 @@ int main(int argc, char** argv)
 
 //Declar number of array
 int n;
+
+//Get Number of array
 n = indexarr();
 
+//Seperator
+cout<<endl<<endl<<"-----------------------------"<<endl<<endl;
 
+//Declare array
+int a[n];
+
+readarr(a , n);
 
 getch();
 }
@@ -40,4 +52,17 @@ int indexarr()
     cin>>n;
 
     return n;
+}
+
+
+//Function for read number for array
+void readarr(int b[],int &h)
+{
+    
+    for(int i=0; i<h; ++i)
+    {
+        cout<<i<<" = ";
+        cin>>b[i];
+        cout<<endl;
+    }
 }
