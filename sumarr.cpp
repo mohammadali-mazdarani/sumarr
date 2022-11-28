@@ -15,6 +15,8 @@ int indexarr();
 
 void readarr(int b[],int &h);
 
+int sumarr(int d[],int c);
+
 
 //--------------------------
 //micro
@@ -37,6 +39,11 @@ cout<<endl<<endl<<"-----------------------------"<<endl<<endl;
 int a[n];
 
 readarr(a , n);
+
+//Seperator
+cout<<endl<<endl<<"-----------------------------"<<endl<<endl;
+
+cout<<"sum of array = "<<sumarr(a,n);
 
 getch();
 }
@@ -65,4 +72,19 @@ void readarr(int b[],int &h)
         cin>>b[i];
         cout<<endl;
     }
+}
+
+
+//function for sum aaray number with cursive function
+
+int sumarr(int d[],int c)
+{
+
+    
+    if ( c == 1 )
+    return d[0];
+    else
+    return sumarr(d , c-1) + d[c-1];
+
+
 }
