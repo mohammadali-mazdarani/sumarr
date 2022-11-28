@@ -10,6 +10,14 @@ using namespace std;
 *
 */
 //prototype
+
+int indexarr();
+
+void readarr(int b[],int &h);
+
+int sumarr(int d[],int c);
+
+
 //--------------------------
 //micro
 //---------------------
@@ -18,8 +26,65 @@ using namespace std;
 int main(int argc, char** argv)
 {
 
+//Declar number of array
+int n;
+
+//Get Number of array
+n = indexarr();
+
+//Seperator
+cout<<endl<<endl<<"-----------------------------"<<endl<<endl;
+
+//Declare array
+int a[n];
+
+readarr(a , n);
+
+//Seperator
+cout<<endl<<endl<<"-----------------------------"<<endl<<endl;
+
+cout<<"sum of array = "<<sumarr(a,n);
+
 getch();
 }
 //function variable
 //--------------------------
 //functions
+
+//read number of array
+int indexarr()
+{
+    int n;
+    cout<<"Enter number of array = ";
+    cin>>n;
+
+    return n;
+}
+
+
+//Function for read number for array
+void readarr(int b[],int &h)
+{
+    
+    for(int i=0; i<h; ++i)
+    {
+        cout<<i<<" = ";
+        cin>>b[i];
+        cout<<endl;
+    }
+}
+
+
+//function for sum aaray number with cursive function
+
+int sumarr(int d[],int c)
+{
+
+    
+    if ( c == 1 )
+    return d[0];
+    else
+    return sumarr(d , c-1) + d[c-1];
+
+
+}
